@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic TAc Toe</title>
+    <style>
+        body {
+            background-color: purple;
+            color: white;
+            text-align: center;
+        }
+
+        #mainArea {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 80vh;
+            width: 100%;
+        }
+
+        .box {
+            height: 80px;
+            width: 80px;
+            border-radius: 10px;
+            border: 0px;
+            background-color: palevioletred;
+            cursor: pointer;
+            color: white;
+            font-size: xx-large;
+        }
+
+        #gameArea {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tic Tac Toe</h1>
+
+    <div id="mainArea">
+        <div id="gameArea">
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+
+        </div>
+        <div id="resultDiv">
+
+        </div><br>
+        
+    </div>
+    <button id="restartBtn" style="height: 80px;width: 80px;align-items:center;margin-top: 2px;background-color: purple;color: white;">
+        Restart
+    </button>
+  
+
+    <script src="./tic tac toe orginal.js"></script>
+
+
+
+</body>
+
+</html>

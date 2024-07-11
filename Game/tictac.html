@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <style>
+        .container {
+            height: 420px;
+            width: 700px;
+            top: 50%;
+            margin-left: 380px;
+            border: 2px solid white;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background-color: blueviolet;
+            border: 2px solid white;
+            margin-left: 20px;
+            margin-top: 20px;
+            gap: 80px;
+            height: 100px;
+            width: 200px;
+            color: white;
+            font-size: 50px;
+            border-radius: 20px;
+        }
+
+        h1 {
+            margin-top: 150px;
+            text-align: center;
+            color: white;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body style="background-color: blueviolet;">
+    <h1>TIC TAC TOE</h1>
+
+
+    <div class="container">
+        <button id="btn1" onclick="func('1')"></button>
+        <button id="btn2" onclick="func('2')"></button>
+        <button id="btn3" onclick="func('3')"></button>
+        <button id="btn4" onclick="func('4')"></button>
+        <button id="btn5" onclick="func('5')"></button>
+        <button id="btn6" onclick="func('6')"></button>
+        <button id="btn7" onclick="func('7')"></button>
+        <button id="btn8" onclick="func('8')"></button>
+        <button id="btn9" onclick="func('9')"></button>
+    </div>
+    <div id="result">
+
+    </div>
+    <script>
+        var count = 0;
+        function func(value) {
+            if (value == '1') {
+                if (btn1.innerText == '') {
+                    if (count % 2 == 0) {
+                        btn1.innerText = 'O';
+                        count++;
+                    } else {
+                        btn1.innerText = 'x';
+                        count++;
+                    }
+                }
+            }
+            if (value == '2') {
+                if (btn2.innerText == '') {
+                    if (count % 2 == 0) {
+                        btn2.innerText = 'O';
+                        count++;
+                    } else {
+                        btn2.innerText = 'x';
+                        count++;
+                    }
+                }
+            }
+            if (value == '3') {
+                if (btn3.innerText == '') {
+                    if (count % 2 == 0) {
+                        btn3.innerText = 'O';
+                        count++;
+                    } else {
+                        btn3.innerText = 'x';
+                        count++;
+                    }
+                }
+            }
+            if (value == '4') {
+                if (btn4.innerText == '') {
+                    if (count % 2 == 0) {
+                        btn4.innerText = 'O';
+                        count++;
+                    } else {
+                        btn4.innerText = 'x';
+                        count++;
+                    }
+                }
+            }
+            if (value == '5') {
+                if (btn5.innerText == '') {
+                    if (count % 2 == 0) {
+                        btn5.innerText = 'O';
+                        count++;
+                    } else {
+                        btn5.innerText = 'x';
+                        count++;
+                    }
+                }
+            }
+            if (value == '6') {
+                if (btn6.innerText == '') {
+                    if (count % 2 == 0) {
+                        btn6.innerText = 'O';
+                        count++;
+                    } else {
+                        btn6.innerText = 'x';
+                        count++;
+                    }
+                }
+            }
+            if (value == '7') {
+                if (btn7.innerText == '') {
+                    if (count % 2 == 0) {
+                        btn7.innerText = 'O';
+                        count++;
+                    } else {
+                        btn7.innerText = 'x';
+                        count++;
+                    }
+                }
+            }
+            if (value == '8') {
+                if (btn8.innerText == '') {
+                    if (count % 2 == 0) {
+                        btn8.innerText = 'O';
+                        count++;
+                    } else {
+                        btn8.innerText = 'x';
+                        count++;
+                    }
+                }
+            }
+            if (value == '9') {
+                if (btn9.innerText == '') {
+                    if (count % 2 == 0) {
+                        btn9.innerText = 'O';
+                        count++;
+                    } else {
+                        btn9.innerText = 'x';
+                        count++;
+                    }
+                }
+            }
+            win();
+        }
+        function win() {
+            if ((btn1.innerText === 'O' && btn2.innerText === 'O' && btn3.innerText === 'O')
+                || (btn4.innerText == 'O' && btn5.innerText == 'O' && btn6.innerText == 'O')
+                || (btn7.innerText == 'O' && btn8.innerText == 'O' && btn9.innerText == 'O')
+                || (btn1.innerText == 'O' && btn4.innerText == 'O' && btn7.innerText == 'O')
+                || (btn2.innerText == 'O' && btn5.innerText == 'O' && btn8.innerText == 'O')
+                || (btn3.innerText == 'O' && btn6.innerText == 'O' && btn9.innerText == 'O')
+                || (btn1.innerText == 'O' && btn5.innerText == 'O' && btn9.innerText == 'O')
+                || (btn3.innerText == 'O' && btn5.innerText == 'O' && btn7.innerText == 'O')) {
+                result.innerText = 'Player O wins';
+            }
+            else if ((btn1.innerText == 'x' && btn2.innerText == 'x' && btn3.innerText == 'x')
+                || (btn4.innerText == 'x' && btn5.innerText == 'x' && btn6.innerText == 'x')
+                || (btn7.innerText == 'x' && btn8.innerText == 'x' && btn9.innerText == 'x')
+                || (btn1.innerText == 'x' && btn4.innerText == 'x' && btn7.innerText == 'x')
+                || (btn2.innerText == 'x' && btn5.innerText == 'x' && btn8.innerText == 'x')
+                || (btn3.innerText == 'x' && btn6.innerText == 'x' && btn9.innerText == 'x')
+                || (btn1.innerText == 'x' && btn5.innerText == 'x' && btn9.innerText == 'x')
+                || (btn3.innerText == 'x' && btn5.innerText == 'x' && btn7.innerText == 'x')) {
+                result.innerText = 'Player X wins';
+            }
+            else {
+                result.innerText = 'Tie';
+            }
+        }
+    </script>
+</body>
+
+</html>
